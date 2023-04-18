@@ -1,7 +1,10 @@
 #     I have created this file Mrinmay
 from django.http import HttpResponse
 def index(request):
-    return HttpResponse('''<h1>Konnichiwa<h1/> <br> <a href="https://github.com/DON2604"> superrr <a/>''')
+    return HttpResponse("Home")
 
-def about(request):
-    return HttpResponse("Hello Everynyan")
+def removepunc(request):
+    return HttpResponse("removepunc")
+
+def capfirst(request):
+    return HttpResponse("captalise first")
