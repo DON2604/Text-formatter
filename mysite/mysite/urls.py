@@ -20,7 +20,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("__reload__/", include("django_browser_reload.urls")),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('removepunc', views.removepunc, name='rempun'),
