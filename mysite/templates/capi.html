@@ -49,7 +49,7 @@ color: white;
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">remove punctuations</a>
-            <a class="dropdown-item" href="{% url 'capi' %}">capitalise</a>
+            <a class="dropdown-item" href="#">capitalise</a>
             <a class="dropdown-item" href="#">lower cased</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Make a name card😍</a>
@@ -67,10 +67,10 @@ color: white;
 <p>
 <h1>Enter Your Text here--------------</h1>
 </p>
-<form action="/removepunc" method="get">
+<form action="/capfirst" method="get">
     <textarea name='text' style="width: 953px; height: 158px;"></textarea>
     <br>
-    <input type="checkbox" name="removepunc">Remove Punctuations <br>
+    <input type="checkbox" name="capitalise">Capitalise Text<br>
     <button type="submit">Analyze</button>
   </form>
 </div>

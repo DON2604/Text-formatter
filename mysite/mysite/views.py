@@ -26,8 +26,18 @@ def removepunc(request):
 
 
 def capfirst(request):
-    return HttpResponse('''captalize it <a href= "/">home</a>''')
+    txty=request.GET.get('text','default')
+    print(txty)
+    noice=request.GET.get('capitalise','off')
+    print(noice)
+    if noice == "on":
+        capitalized_string =""
+        capitalized_string = txty.upper()
+        params = {'purpose': 'capitalised', 'analyzed_text': capitalized_string}
+        return render(request, 'analyze.html', params)
 
+    else:
+        return HttpResponse('Error')
 
 def spacerem(request):
     return HttpResponse('''space removal <a href= "/">home</a>''')
@@ -35,3 +45,9 @@ def spacerem(request):
 
 def counter(request):
     return HttpResponse('''word counter <a href= "/">home</a>''')
+
+def carder(request):
+    return HttpResponse('''name card <a href= "/">home</a>''')
+
+def capi_view(request):
+    return render(request, 'capi.html')
