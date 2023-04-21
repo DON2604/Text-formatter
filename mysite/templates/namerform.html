@@ -61,19 +61,27 @@ color: white;
       </ul>
     </div>
   </nav>
- 
-<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
-    <div style="width: 50%;"> 
-<p>
-<h1>Enter Your Text here--------------</h1>
-</p>
-<form action="/capfirst" method="get">
-    <textarea name='text' style="width: 953px; height: 158px;"></textarea>
-    <br>
-    <input type="checkbox" name="capitalise">Capitalise Text<br>
-    <button type="submit">Analyze</button>
+  <h2>Enter Your Information</h2>
+  <form method="get" action="/carder">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="job">Job:</label>
+      <input type="text" id="job" name="job"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="phone">Phone No:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+      <label for="hobby">Hobby:</label>
+      <input type="text" id="hobby" name="hobby"><br><br>
+      <label for="college">College Name:</label>
+      <input type="text" id="college" name="college"><br><br>
+      <label for="facebook">Facebook:</label>
+      <input type="url" id="facebook" name="facebook"><br><br>
+      <label for="twitter">Twitter:</label>
+      <input type="url" id="twitter" name="twitter"><br><br>
+      <label for="instagram">Instagram:</label>
+      <input type="url" id="instagram" name="instagram"><br><br>
+      <input type="submit" value="Submit">
   </form>
-</div>
-</div>
 </body>
 </html>

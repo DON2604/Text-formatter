@@ -47,7 +47,23 @@ def counter(request):
     return HttpResponse('''word counter <a href= "/">home</a>''')
 
 def carder(request):
-    return HttpResponse('''name card <a href= "/">home</a>''')
+    if request.method == 'GET':
+        name = request.GET.get('name')
+        job = request.GET.get('job')
+        email = request.GET.get('email')
+        phone = request.GET.get('phone')
+        hobby = request.GET.get('hobby')
+        college = request.GET.get('college')
+        facebook = request.GET.get('facebook')
+        twitter = request.GET.get('twitter')
+        instagram = request.GET.get('instagram')
+        param2={'name': name, 'job': job, 'email': email, 'phone': phone, 'hobby': hobby, 'college': college, 'facebook': facebook, 'twitter': twitter, 'instagram': instagram}
+        return render(request, 'name.html', param2)
+    else:
+        return render('error')
 
 def capi_view(request):
     return render(request, 'capi.html')
+
+def name_form(request):
+    return render(request, 'namerform.html')

@@ -26,7 +26,8 @@ urlpatterns = [
     path('capfirst', views.capfirst, name='capfirst'),
     path('count', views.counter, name='counter'),
     path('spacerem', views.spacerem, name='spacerem'),
-    path('namecard', views.carder, name='carder'),
+    path('carder', views.carder, name='carder'),
     path('capi/', views.capi_view , name='capi'),
+    path('name-form/', views.name_form , name='name-form'),
 
 ]
