@@ -29,5 +29,6 @@ urlpatterns = [
     path('carder', views.carder, name='carder'),
     path('capi/', views.capi_view , name='capi'),
     path('name-form/', views.name_form , name='name-form'),
+    path('about/', views.about , name='about'),
 
 ]

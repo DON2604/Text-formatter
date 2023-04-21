@@ -67,3 +67,6 @@ def capi_view(request):
 
 def name_form(request):
     return render(request, 'namerform.html')
+
+def about(request):
+    return render(request, 'about.html')
