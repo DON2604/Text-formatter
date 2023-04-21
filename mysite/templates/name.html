@@ -6,86 +6,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-        body {
-            background-color: #eee;
-            font-family: 'Roboto', sans-serif;
-        }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
-        .card {
-            background-color:#B9F6CA;
-            width: 350px;
-            border-radius: 20px;
-        }
+body{
+   background-color: #f3f3f3;
+}
 
-        .heading {
-            font-weight: 700;
-        }
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 450px;
+  display: flex;
+  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
 
-        .hour {
-            margin-top: 1px;
-            color: green;
-            font-size: 12px;
-        }
+.wrapper .left{
+  width: 35%;
+  background: linear-gradient(to right,#f9ca24,#f5cd79);
+  padding: 30px 25px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
 
-        .ratings i {
-            color: #388E3C;
-        }
+.wrapper .left img{
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
-        .btn {
-            border-radius: 15px !important;
-        }
+.wrapper .left h4{
+  margin-bottom: 10px;
+}
 
-        .line-color {
-            color: green;
-            height: 3px;
-        }
+.wrapper .left p{
+  font-size: 12px;
+}
+
+.wrapper .right{
+  width: 65%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects{
+  margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.wrapper .right .info_data,
+.wrapper .right .projects_data{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .right .info_data .data,
+.wrapper .right .projects_data .data{
+  width: 45%;
+}
+
+.wrapper .right .info_data .data h4,
+.wrapper .right .projects_data .data h4{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #919aa3;
+}
+
+.wrapper .social_media ul{
+  display: flex;
+}
+
+.wrapper .social_media ul li{
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to right,#f9ca24,#f5cd79);
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.wrapper .social_media ul li a{
+  color :#fff;
+  display: block;
+  font-size: 18px;
+}
+
+.wrapper .social_media ul li:hover {
+  background: #f5cd79;}
     </style>
+    
+    
 </head>
 <body>
-    <div class="container mt-5 d-flex justify-content-center">
-        <div class="card p-4 mt-3">
-            <div class="first">
-                <h6 class="heading">Exquisite hand henna tattoo</h6>
-                <div class="time d-flex flex-row align-items-center justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-clock-o clock"></i>
-                        <span class="hour ml-1">3 hrs</span>
-                    </div>
-                    <div>
-                        <span class="font-weight-bold">$90</span>
-                    </div>
-                </div>
-            </div>
-            <div class="second d-flex flex-row mt-2">
-                <div class="image mr-3">
-                    <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60"/>
-                </div>
-                <div>
-                    <div class="d-flex flex-row mb-1">
-                        <span>@hairtaje</span>
-                        <div class="ratings ml-2">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="btn btn-outline-dark btn-sm px-2">+ follow</button>
-                        <button class="btn btn-outline-dark btn-sm">See Profile</button>
-                        <button class="btn btn-outline-dark btn-sm"><i class="fa fa-comment-o"></i></button>
-                    </div>
-                </div>
-            </div>
-            <hr class="line-color">
-            <h6>48 comments</h6>
-            <div class="third mt-4">
-                <button class="btn btn-success btn-block"><i class="fa fa-clock-o"></i> Book Now</button>
-            </div>
+    <!DOCTYPE html>
+
+    <html lang="en">
+    
+    <head>
+    
+        <meta charset="UTF-8">	<title>Your Profile Card</title>
+    
+        <link rel="stylesheet" href="styles.css">
+    
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    
+    </head>
+    
+    <body>
+    
+    <div class="wrapper">
+    
+        <div class="left">
+    
+            <img src="https://i.imgur.com/cMy8V5j.png" 
+    
+            alt="user" width="100">
+    
+            <h4>Mrinmay Das</h4>
+    
+             <p>UI Developer</p>
+    
         </div>
+    
+        <div class="right">
+    
+            <div class="info">
+    
+                <h3>Information</h3>
+    
+                <div class="info_data">
+    
+                     <div class="data">
+    
+                        <h4>Email</h4>
+    
+                        <p>alex@gmail.com</p>
+    
+                     </div>
+    
+                     <div class="data">
+    
+                       <h4>Phone</h4>
+    
+                        <p>0001-213-998761</p>
+    
+                  </div>
+    
+                </div>
+    
+            </div>
+    
+          
+    
+          <div class="projects">
+    
+                <h3>Projects</h3>
+    
+                <div class="projects_data">
+    
+                     <div class="data">
+    
+                        <h4>Recent</h4>
+    
+                        <p>Lorem ipsum dolor sit amet.</p>
+    
+                     </div>
+    
+                     <div class="data">
+    
+                       <h4>Most Viewed</h4>
+    
+                        <p>dolor sit amet.</p>
+    
+                  </div>
+    
+                </div>
+    
+            </div>
+    
+          
+    
+            <div class="social_media">
+    
+                <ul>
+    
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    
+              </ul>
+    
+          </div>
+    
+        </div>
+    
     </div>
-</body>
-</html>
+    
+    </body>
+    
+    </html>
+
